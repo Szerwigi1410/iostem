@@ -63,7 +63,7 @@ FLOAT_NUMBER RANDOM_FLOAT OPEN FLOAT_NUMBER a, FLOAT_NUMBER b CLOSE {
 }
 
 //slow saying--------------------------------------------------------------------------
-/*class SAY_SLOWLY
+class SAY_SLOWLY
 {
     string * sp{};
 	public:
@@ -76,11 +76,11 @@ FLOAT_NUMBER RANDOM_FLOAT OPEN FLOAT_NUMBER a, FLOAT_NUMBER b CLOSE {
 		{
 			os << cp[i++];
 			os.flush();
-			std::this_thread::sleep_for (std::chrono::milliseconds(25));
+			usleep(25000);
 		}
 		return os;
 	}
-};*/
+};
 
 //waiting-----------------------------------------------------------------
 NORETURN WAIT OPEN int x CLOSE {
