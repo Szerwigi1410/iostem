@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
-#include <random>
+#include <cstdlib>
+#include <ctime>
 #include <unistd.h>
 //#include <chrono>
 //#include <thread>
@@ -49,17 +50,12 @@ using namespace std;
 
 //random number generator generator-----------------------------------------------
 FULL_NUMBER RANDOM OPEN FULL_NUMBER a, FULL_NUMBER b CLOSE {
-    random_device rd;
-    mt19937 gen OPEN rd OPEN CLOSE CLOSE;
-    uniform_int_distribution<FULL_NUMBER> dist OPEN a, b CLOSE;
-    return dist OPEN gen CLOSE;
+    return a + rand() % (b - a + 1);
 }
+
 //random float generator----------------------------------------------------------------
 FLOAT_NUMBER RANDOM_FLOAT OPEN FLOAT_NUMBER a, FLOAT_NUMBER b CLOSE {
-    random_device rd;
-    mt19937 gen OPEN rd OPEN CLOSE CLOSE;
-    uniform_real_distribution<FLOAT_NUMBER> dist OPEN a, b CLOSE;
-    return dist OPEN gen CLOSE;
+    return a + (FLOAT_NUMBER)rand() / (FLOAT_NUMBER)RAND_MAX * (b - a);
 }
 
 //slow saying--------------------------------------------------------------------------
