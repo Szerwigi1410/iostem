@@ -62,12 +62,12 @@ FLOAT_NUMBER RANDOM_FLOAT OPEN FLOAT_NUMBER a, FLOAT_NUMBER b CLOSE {
 }
 
 //slow saying--------------------------------------------------------------------------
-class SAY_SLOWLY
+class SLOWLY
 {
     string * sp{};
 	public:
-	SAY_SLOWLY(string &s){sp = &s;};
-    friend ostream& operator<<(ostream& os, const SAY_SLOWLY &str)
+	SLOWLY(string &s){sp = &s;};
+    friend ostream& operator<<(ostream& os, const SLOWLY &str)
 	{
 		auto cp{str.sp->c_str()};
 		int i{};

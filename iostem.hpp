@@ -20,6 +20,7 @@ using namespace std;
 #define START_CODE int main() {
 #define END_CODE return 0; }
 #define END_CODE_BAD return 1; }
+#define END_CODE_WITH return //example: END_CODE_WITH 5;
 #define NORETURN void
 //printing--------------------------
 #define SAY cout <<
@@ -45,6 +46,8 @@ using namespace std;
 #define IsSMALLER <
 #define IsBIGGER_EQ >=
 #define IsSMALLER_EQ <=
+#define EQ =
+#define NOT_EQ !=
 
 //random number generator generator-----------------------------------------------
 FULL_NUMBER RANDOM OPEN FULL_NUMBER a, FULL_NUMBER b CLOSE {
@@ -62,12 +65,12 @@ FLOAT_NUMBER RANDOM_FLOAT OPEN FLOAT_NUMBER a, FLOAT_NUMBER b CLOSE {
 }
 
 //slow saying--------------------------------------------------------------------------
-class SAY_SLOWLY
+class SLOWLY
 {
     string * sp{};
 	public:
-	SAY_SLOWLY(string &s){sp = &s;};
-    friend ostream& operator<<(ostream& os, const SAY_SLOWLY &str)
+	SLOWLY(string &s){sp = &s;};
+    friend ostream& operator<<(ostream& os, const SLOWLY &str)
 	{
 		auto cp{str.sp->c_str()};
 		int i{};
@@ -98,4 +101,27 @@ void SPINNER(int x) {
 		std::this_thread::sleep_for(std::chrono::milliseconds(x));
 		cout << "\b" << flush;
 	}
+}
+
+void iusearchbtw() {
+SAY "                    -`                   " NEWLINE
+SAY "                   .o+`                  " NEWLINE
+SAY "                  `ooo/                  " NEWLINE
+SAY "                 `+oooo:                 " NEWLINE
+SAY "                `+oooooo:                " NEWLINE
+SAY "                -+oooooo+:               " NEWLINE
+SAY "              `/:-:++oooo+:              " NEWLINE
+SAY "             `/++++/+++++++:             " NEWLINE
+SAY "            `/++++++++++++++:            " NEWLINE
+SAY "           `/+++ooooooooooooo/`          " NEWLINE
+SAY "         ./ooosssso++osssssso+`          " NEWLINE
+SAY "        .oossssso-````/ossssss+`         " NEWLINE
+SAY "       -osssssso.      :ssssssso.        " NEWLINE
+SAY "      :osssssss/        osssso+++.       " NEWLINE
+SAY "     /ossssssss/        +ssssooo/-       " NEWLINE
+SAY "   `/ossssso+/:-        -:/+osssso+-     " NEWLINE
+SAY "  `+sso+:-`                 `.-/+oso:    " NEWLINE
+SAY " `++:.                           `-/+/   " NEWLINE
+SAY " .`                                 `/   " NEWLINE
+SAY "                                         " NEWLINE
 }

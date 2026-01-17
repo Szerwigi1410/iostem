@@ -1,0 +1,5 @@
+#include <iostem.hpp>
+
+START_CODE
+	SAY "HELLO WORLD" NEWLINE
+END_CODE
