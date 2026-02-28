@@ -14,5 +14,5 @@ END_CODE
 
 ## About files
 - `iostem.hpp` - the header file using C++11 standard libs
-- `iostem` - same thing as iostem.hpp but without the header file extension. It is more recommended to use `iostem.hpp`
+- `iostem` - doesnt matter if you use `iostem` or `iostem.hpp` in your file
 - `iostem98.hpp` - works exactly the same as `iostem.hpp` but uses C++98 standard libs
